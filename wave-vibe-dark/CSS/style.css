@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a3535e, #a170a1, #417d88);
+    background-size: 200%;
+    animation: gradient 15s infinite;
+    /* background-image: url("dead_samurai.png"); */
+}
+
+
+.panel {
+    width: 100%;
+    height: 25px;
+    background-color: rgba(46, 43, 43, 1);
+    border-radius: 0 0 7px 7px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+
+.time {
+    color: #dfdfdf;
+    font-size: 21px;
+}
+
+
+.login-panel {
+    margin: auto;
+    margin-top: 15%;
+    width: 330px;
+    height: 385px;
+    background-color: rgba(46, 43, 43, 1);
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px 0 #474747;
+    padding-top: 15px;
+}
+
+
+.actions {
+    cursor: pointer;
+    position: absolute;
+}
+
+.actions:active {
+    transform: translateY(1.5px);
+}
+
+
+.shutdown {
+    stroke: rgba(167, 167, 167, 0.7);
+}
+
+.shutdown:hover {
+    stroke: rgba(248, 58, 58, 0.7);
+}
+
+
+.reboot {
+    opacity: 0;
+    stroke: rgba(167, 167, 167, 0.7);
+}
+
+.reboot:hover {
+    stroke: rgba(4, 197, 4, 0.7);
+}
+
+
+.suspend {
+    opacity: 0;
+    stroke: rgba(167, 167, 167, 0.7);
+}
+
+.suspend:hover {
+    stroke: rgba(255, 196, 0, 0.9);
+}
+
+
+.actions-container {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 297px;
+    margin-top: -8px;
+}
+
+.actions-container:hover {
+    height: 100px;
+    transition: 0.7s;
+}
+
+.actions-container:hover .reboot {
+    opacity: 1;
+    margin-top: 32px;
+    animation: reboot 0.7s ease;
+}
+
+.actions-container:hover .suspend {
+    opacity: 1;
+    margin-top: 66px;
+    animation: suspend 0.7s ease;
+}
+
+
+.login-panel__avatar-frame {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid lightgray;
+    margin-left: 30%;
+}
+
+
+.login-panel__input-container {
+    margin-left: 29px;
+    margin-top: 35px;
+}
+
+
+.login-panel__login {
+    height: 35px;
+    width: 250px;
+    padding: 0 10px;
+    border: 1px solid rgba(211, 211, 211, .5);
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.login-panel__login:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px 0 rgba(159, 211, 226, .7);
+}
+
+.login-panel__login:focus::placeholder {
+    color: transparent;
+}
+
+.login-panel__login::placeholder {
+    color: white;
+}
+
+/* Add background layout, if login were finded in the system */
+.login-panel__login_exist {
+    background-color: rgba(204, 204, 204, .5);
+}
+
+
+.login-panel__password {
+    height: 35px;
+    width: 250px;
+    padding: 0 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(211, 211, 211, .5);
+    background-color: transparent;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+}
+
+.login-panel__password:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px 0 rgba(159, 211, 226, .7);
+}
+
+.login-panel__password:focus::placeholder {
+    color: transparent;
+}
+
+.login-panel__password::placeholder {
+    color: white;
+}
+
+.login-panel__submit {
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0;
+    background: linear-gradient(to right, #e66677, #c789c7, #5fb9c9);
+    background-size: 300%;
+    animation: gradient 15s ease infinite;
+    transform: translateX(0px) translateY(0px);
+    border: none;
+    margin-top: 65px;
+    margin-left: 54px;
+}
+
+.login-panel__submit:hover {
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(to left, #e66677, #c789c7, #5fb9c9);
+    background-size: 300% 300%;
+    animation: submit 10s ease infinite;
+    cursor: pointer;
+}
+
+.login-panel__submit:focus {
+    outline: none;
+    border: none;
+}
+
+.login-panel__submit:active {
+    transform: translateY(.5px);
+    transition: .1s;
+    box-shadow: inset -.5px -.5px 5px 0 lightgray;
+}
+
+
+.submit__text {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.submit__text::before {
+    content: "Welcome";
+    position: absolute;
+    font-size: 22px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.submit__text:hover::before {
+    opacity: 0;
+    transition: 0.3s;
+    transform: scale(.8);
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+
+    50% {
+        background-position: 100%
+    }
+
+    100% {
+        background-position: 0%
+    }
+}
+
+@keyframes reboot {
+    0% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 32px;
+    }
+}
+
+@keyframes suspend {
+    0% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 66px;
+    }
+}

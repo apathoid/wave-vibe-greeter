@@ -1,0 +1,6 @@
+[theme]
+name=lightdm-wave-vibe-dark-greeter
+description=Minimalistic Greeter
+engine=lightdm-webkit-greeter
+url=index.html
+session=gnome
