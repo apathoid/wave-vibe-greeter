@@ -1,6 +1,6 @@
 Inspired by Gabriel Tenma project. Designed for myself :)<br>
 <br>
-Original: (https://github.com/GabrielTenma/lightdm-gab-gradient)
+Original: https://github.com/GabrielTenma/lightdm-gab-gradient
 
 This is not a finished product. Just a sample.
 
