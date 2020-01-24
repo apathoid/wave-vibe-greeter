@@ -1,4 +1,4 @@
-## Inspired by Gabriel Tenma project. Designed for myself :)
+## Inspired by Gabriel Tenma project. Designed for myself.
 
 
 * Original: https://github.com/GabrielTenma/lightdm-gab-gradient
